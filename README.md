@@ -81,6 +81,31 @@ with torch.no_grad():
 - PyTorch
 - Python 3.7+
 
+## Citation
+
+If you use this implementation in your research or projects, please cite:
+
+```bibtex
+@software{gomez2024omnialignnet,
+  author = {Gomez, Kye},
+  title = {OmniAlignNet: PyTorch Implementation},
+  year = {2024},
+  url = {https://github.com/kyegomez/OmniAlignNet},
+  email = {kye@swarms.world}
+}
+```
+
+For the original OmniVinci paper, please cite:
+
+```bibtex
+@article{ye2024omnivinci,
+  title={OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM},
+  author={Ye, Hanrong and Yang, Chao-Han Huck and Goel, Arushi and others},
+  journal={arXiv preprint arXiv:2510.15870},
+  year={2024}
+}
+```
+
 ## License
 
 This implementation is provided as an educational resource and follows the same open-source principles as the original OmniVinci paper.
