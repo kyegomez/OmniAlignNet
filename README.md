@@ -22,7 +22,7 @@ This implementation includes:
 
 ## Architecture Components
 
-### OmniNet Module
+### OmniAlignNet Module
 The main module that processes vision and audio tokens through:
 - Cross-attention layers for modality interaction
 - Self-attention layers for intra-modal processing
@@ -47,10 +47,10 @@ pip3 install -U torch
 
 ```python
 import torch
-from main import OmniNet
+from main import OmniAlignNet
 
 # Initialize the model
-model = OmniNet(
+model = OmniAlignNet(
     dim=512,
     num_heads=8,
     query_heads=4,

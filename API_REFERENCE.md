@@ -7,7 +7,7 @@ Complete reference documentation for all modules, classes, and methods in the Om
 ## Table of Contents
 - [CrossAttention](#crossattention)
 - [SelfAttention](#selfattention)
-- [OmniNet](#omninet)
+- [OmniAlignNet](#omninet)
 - [Type Definitions](#type-definitions)
 
 ---
@@ -159,21 +159,21 @@ Forward pass of self-attention mechanism.
 
 ---
 
-## OmniNet
+## OmniAlignNet
 
 Main OmniAlignNet module implementing dual-stream multimodal alignment architecture with cross-attention, self-attention, and CLIP-style contrastive learning.
 
 ### Class Definition
 
 ```python
-class OmniNet(nn.Module)
+class OmniAlignNet(nn.Module)
 ```
 
 ### Constructor
 
 #### `__init__(dim: int, num_heads: int, query_heads: int = 1, dropout: float = 0.0, kv_heads: int = 1, temperature: float = 0.07, parallel: bool = True)`
 
-Initialize the OmniNet module.
+Initialize the OmniAlignNet module.
 
 **Parameters:**
 
@@ -494,11 +494,11 @@ Tuple[Tensor, Tensor, Tensor] = (Tensor, Tensor, Tensor)
 | `__init__` | `dim: int, num_heads: int, dropout: float, bias: bool` | `None` | Initialize self-attention module |
 | `forward` | `x: Tensor, mask: Optional[Tensor]` | `Tensor` | Forward pass of self-attention |
 
-### OmniNet Methods
+### OmniAlignNet Methods
 
 | Method | Input Types | Output Type | Description |
 |--------|-------------|-------------|-------------|
-| `__init__` | `dim: int, num_heads: int, query_heads: int, dropout: float, kv_heads: int, temperature: float, parallel: bool` | `None` | Initialize OmniNet module |
+| `__init__` | `dim: int, num_heads: int, query_heads: int, dropout: float, kv_heads: int, temperature: float, parallel: bool` | `None` | Initialize OmniAlignNet module |
 | `forward` | `vision_input: Tensor, audio_input: Tensor, mask: Optional[Tensor]` | `Tuple[Tensor, Tensor, Tensor]` | Main forward pass (routes to parallel or standard) |
 | `forward_parallel` | `vision_input: Tensor, audio_input: Tensor, mask: Optional[Tensor]` | `Tuple[Tensor, Tensor, Tensor]` | Parallelized forward pass with JIT optimization |
 | `_forward` | `vision_input: Tensor, audio_input: Tensor, mask: Optional[Tensor]` | `Tuple[Tensor, Tensor, Tensor]` | Standard forward pass implementation |
@@ -516,10 +516,10 @@ Tuple[Tensor, Tensor, Tensor] = (Tensor, Tensor, Tensor)
 
 ```python
 import torch
-from main import OmniNet
+from main import OmniAlignNet
 
 # Initialize model
-model = OmniNet(
+model = OmniAlignNet(
     dim=512,
     num_heads=8,
     query_heads=4,
@@ -586,7 +586,7 @@ plt.show()
 import torch.optim as optim
 
 # Initialize model and optimizer
-model = OmniNet(dim=512, num_heads=8, temperature=0.07)
+model = OmniAlignNet(dim=512, num_heads=8, temperature=0.07)
 optimizer = optim.AdamW(model.parameters(), lr=1e-4)
 
 # Training loop

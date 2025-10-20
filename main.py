@@ -193,7 +193,7 @@ class SelfAttention(nn.Module):
         return out
 
 
-class OmniNet(nn.Module):
+class OmniAlignNet(nn.Module):
     """
     OmniAlignNet module implementing dual-stream multimodal alignment architecture.
     
@@ -589,45 +589,10 @@ class OmniNet(nn.Module):
             )
 
 
-
-
-
-# Example usage and testing
-if __name__ == "__main__":
-    # Initialize the OmniNet module
-    model = OmniNet(
-        dim=512,
-        num_heads=8,
-        query_heads=4,
-        dropout=0.1,
-        kv_heads=2,
-        temperature=0.07,
-    )
-    
-    # Create sample input data
-    batch_size = 2
-    vision_seq_len = 10
-    audio_seq_len = 8
-    dim = 512
-    
-    vision_tokens = torch.randn(batch_size, vision_seq_len, dim)
-    audio_tokens = torch.randn(batch_size, audio_seq_len, dim)
-    
-    with torch.no_grad():
-        vision_embeddings, audio_embeddings, clip_loss = model(
-            vision_tokens, audio_tokens
-        )
-        
-        print(f"Vision embeddings: {vision_embeddings.shape}")
-        print(f"Audio embeddings: {audio_embeddings.shape}")
-        print(f"CLIP loss: {clip_loss.item():.4f}")
-
-
-
 # # Example usage and testing
 # if __name__ == "__main__":
-#     # Initialize the OmniNet module
-#     model = OmniNet(
+#     # Initialize the OmniAlignNet module
+#     model = OmniAlignNet(
 #         dim=512,
 #         num_heads=8,
 #         query_heads=4,
@@ -645,7 +610,7 @@ if __name__ == "__main__":
 #     vision_tokens = torch.randn(batch_size, vision_seq_len, dim)
 #     audio_tokens = torch.randn(batch_size, audio_seq_len, dim)
     
-#     print("OmniNet Module Test - Parallelization Comparison")
+#     print("OmniAlignNet Module Test - Parallelization Comparison")
 #     print("=" * 60)
 #     print("Input shapes:")
 #     print(f"  Vision tokens: {vision_tokens.shape}")
@@ -712,4 +677,4 @@ if __name__ == "__main__":
 #     print("  ✓ JIT compilation optimization")
 #     print("  ✓ Memory-efficient operations")
 #     print("  ✓ Parallel stream processing")
-#     print("\nOmniNet parallelized implementation completed successfully!")
+#     print("\nOmniAlignNet parallelized implementation completed successfully!")
