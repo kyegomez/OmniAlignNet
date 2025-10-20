@@ -99,7 +99,7 @@ If you use this implementation in your research or projects, please cite:
 @software{gomez2024omnialignnet,
   author = {Gomez, Kye},
   title = {OmniAlignNet: PyTorch Implementation},
-  year = {2024},
+  year = {2025},
   url = {https://github.com/kyegomez/OmniAlignNet},
   email = {kye@swarms.world}
 }
@@ -112,7 +112,7 @@ For the original OmniVinci paper, please cite:
   title={OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM},
   author={Ye, Hanrong and Yang, Chao-Han Huck and Goel, Arushi and others},
   journal={arXiv preprint arXiv:2510.15870},
-  year={2024}
+  year={2025}
 }
 ```
 
