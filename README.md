@@ -33,6 +33,10 @@ The main module that processes vision and audio tokens through:
 - **CrossAttention**: Custom implementation for cross-modal attention
 - **SelfAttention**: Custom implementation for self-attention within modalities
 
+## Documentation
+
+For complete API reference including all methods, input/output types, and detailed usage examples, see the **[API Reference Documentation](API_REFERENCE.md)**.
+
 ## Install
 
 ```bash
