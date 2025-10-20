@@ -1,10 +1,8 @@
-# OmniVinci Implementation
+# OmniAlignNet Implementation
 
-A simple open-source implementation of the OmniVinci paper: "Enhancing Architecture and Data for Omni-Modal Understanding LLM".
+![OmniAlignNet Architecture](image.jpeg)
 
-## Overview
-
-This implementation provides a PyTorch-based implementation of the OmniAlignNet architecture described in the OmniVinci paper. The model focuses on strengthening alignment between vision and audio embeddings in a shared omni-modal latent space.
+An open-source PyTorch implementation of OmniAlignNet from the OmniVinci paper, designed to align vision and audio embeddings in a shared omni-modal space.
 
 ## Paper Reference
 
