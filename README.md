@@ -33,6 +33,12 @@ The main module that processes vision and audio tokens through:
 - **CrossAttention**: Custom implementation for cross-modal attention
 - **SelfAttention**: Custom implementation for self-attention within modalities
 
+## Install
+
+```bash
+pip3 install -U torch
+```
+
 ## Usage
 
 ```python
