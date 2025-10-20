@@ -39,7 +39,7 @@ The main module that processes vision and audio tokens through:
 
 ```python
 import torch
-from omni_net_implementation_practice import OmniNet
+from main import OmniNet
 
 # Initialize the model
 model = OmniNet(
